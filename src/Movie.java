@@ -1,6 +1,6 @@
 public class Movie {
 
-    //Attributter
+    //ATTRIBUTTER
     private String title;
     private String director;
     private int yearCreated;
@@ -8,7 +8,7 @@ public class Movie {
     private int lenghtInMinutes;
     private String genre;
 
-    //Constructor/Parametre
+    //CONSTRUCTOR
     public Movie(String title, String director, int yearCreated, boolean isInColor,
                  int lenghtInMinutes, String genre){
         this.title = title;
@@ -19,6 +19,7 @@ public class Movie {
         this.genre = genre;
     }
 
+    //METODE
     public String getTitle() {
         return title;
     }

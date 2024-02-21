@@ -14,6 +14,7 @@ public class Main {
             System.out.println("Velkommen til min filmsamling!");
             System.out.println("1. Opret en film");
             System.out.println("2. Afslut");
+
             userInput = scanner.nextInt();
 
             if (userInput == 1) {
@@ -35,6 +36,7 @@ public class Main {
                 controller.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
 
                 System.out.println("Filmen er tilføjet til samlingen.");
+                System.out.println();
             }
 
         }
