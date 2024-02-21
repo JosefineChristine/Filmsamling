@@ -1,13 +1,6 @@
 public class Controller {
-    //+addMovie(<parameterList>)
-    //Skal holde på al den information vi har i moviievolletio
-    // holder på et movie collection objekt
-    //godt ha mellemled mellem moviecolletion og main
-    // godt kode design at have n controller
-    // skal afspejle moviecollection
-
-
-
-
-
+    MovieCollection yourMovie = new MovieCollection();
+    public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
+        yourMovie.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+    }
 }

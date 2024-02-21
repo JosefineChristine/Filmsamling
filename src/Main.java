@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //Movie collection objekt:
-        MovieCollection collection = new MovieCollection();
+        Controller controller = new Controller();
 
         int userInput = 0;
         int SENTINEL = 2;
@@ -32,7 +32,7 @@ public class Main {
                 System.out.println("Hvilken genre er filmen?");
                 String genre = scanner.nextLine();
 
-                collection.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+                controller.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
 
                 System.out.println("Filmen er tilføjet til samlingen.");
             }
