@@ -1,37 +1,32 @@
 import java.util.ArrayList;
 
+// MovieCollection er information expert
+
+//En tostring som looper over filmene
+
 //ATTRIBUTES
 public class MovieCollection {
     ArrayList<Movie> movieArr = new ArrayList<Movie>();
-    int count = 0;
-
-    //CONSTRUCTOR
-    public MovieCollection () {
-    }
+    //Der står <Movie> fordi Movie er datatypen
 
     //METODE som modtager data om film
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
-        Movie movie = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+        Movie movie1 = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
+        movieArr.add(movie1);
+    }
 
-        movieArr.add(count, movie);
-        count++;
+    @Override
+    public String toString() {
+        String result = "";
+
+        for (Movie m : movieArr) {
+            result += m.toString();
+        }
+        return result;
     }
 
 }
 
-
-  /*
-  //Array, før vi lavede ArrayList
-    private Movie[] listOfMovies;
-    int count = 0;
-    //Movie[] betyder at Movie er en array
-
-    public MovieCollection() {
-        this.listOfMovies = new Movie[5];
-    }
-
-//metode som modtager data om film
-    public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
-        listOfMovies[count++] = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
-    }
-   */
+   /*//CONSTRUCTOR
+    public MovieCollection () {
+    }*/

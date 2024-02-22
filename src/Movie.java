@@ -1,5 +1,7 @@
 public class Movie {
 
+    //Her er vores dataobjekt
+
     //ATTRIBUTTER
     private String title;
     private String director;
@@ -8,7 +10,7 @@ public class Movie {
     private int lenghtInMinutes;
     private String genre;
 
-    //CONSTRUCTOR
+    //CONSTRUCTOR som bruger this
     public Movie(String title, String director, int yearCreated, boolean isInColor,
                  int lenghtInMinutes, String genre){
         this.title = title;
@@ -44,4 +46,18 @@ public class Movie {
         return genre;
     }
 
+    @Override
+    public String toString(){
+        String result = "";
+        result += title + ", " + director + ", " + yearCreated + ", ";
+
+        if (isInColor) {
+            result += "filmen er i farve";
+        } else {
+            result += "filmen er ikke i farve";
+        }
+
+        result +=  ", " + lenghtInMinutes + ", " + genre;
+        return result;
+    }
 }
