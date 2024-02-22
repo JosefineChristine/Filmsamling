@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 //ATTRIBUTES
 public class MovieCollection {
-    ArrayList<Movie> movieArr = new ArrayList<Movie>();
+    ArrayList<Movie> movieArr = new ArrayList<>();
     //Der står <Movie> fordi Movie er datatypen
 
     //METODE som modtager data om film
