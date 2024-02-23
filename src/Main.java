@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 //Der er kun main der tager data ind og ud
 
@@ -19,7 +20,7 @@ public class Main {
             System.out.println("1. Opret en film");
             System.out.println("2. Vis filmsamling");
             System.out.println("3. Søgefunktion");
-            System.out.println("4. Afslut");
+            System.out.println("4. Afslut\n");
 
             userInput = scanner.nextInt();
 
@@ -55,18 +56,14 @@ public class Main {
                 System.out.println(controller.showMovieCollection());
 
             } else if (userInput == 3){
-                System.out.println("Hvad vil du søge efter i filmsamlingen?");
+                System.out.println("Indtast et eller flere bogstaver i en filmtitel?");
                 String userSearchWord = scanner.next();
                 System.out.println(controller.showSearch(userSearchWord));
-                System.out.println();
-
 
             } else if (userInput == SENTINEL){
                 System.out.println("Oprettelse af film afsluttes.");
             }
-
         }
-
     }
 }
 
