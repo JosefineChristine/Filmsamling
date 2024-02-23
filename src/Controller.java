@@ -7,5 +7,11 @@ public class Controller {
     public String showMovieCollection(){
         return yourMovieCollection.toString();
     }
+
+    public String showSearch(String charInput) {
+        return yourMovieCollection.searchMovie(charInput);
+    }
+
+
 }
 //Controller har en metoder som returerer en string tilbage

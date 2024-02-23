@@ -47,9 +47,12 @@ public class Movie {
     }
 
     @Override
+    //override fordi den har en  indbygget toString som udskriver volapyk,
+    //derfor overrider vi det med en String vi vil have udskrevet.
+    //I nogle tilfælde (det her fx her) behøver man ikke skrive @override, andre gange er det vigtigt.
     public String toString(){
         String result = "";
-        result += title + ", " + director + ", " + yearCreated + ", ";
+        result += "\n" + title + "\n" + director + "\n" + yearCreated + "\n";
 
         if (isInColor) {
             result += "filmen er i farve";
@@ -57,7 +60,9 @@ public class Movie {
             result += "filmen er ikke i farve";
         }
 
-        result +=  ", " + lenghtInMinutes + ", " + genre;
+        result +=  "\n" + lenghtInMinutes + "\n" + genre + " \n" + "\n";
         return result;
     }
 }
+
+//+=: bruges her som ''alt det før plus det her''

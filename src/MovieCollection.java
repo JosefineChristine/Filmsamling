@@ -25,6 +25,16 @@ public class MovieCollection {
         return result;
     }
 
+    public String searchMovie(String charInput) {
+        for (Movie movie : movieArr) {
+            boolean result = movie.getTitle().contains(charInput);
+
+            if (result) {
+                return movie.toString();
+            }
+        }
+        return "Søgningen gav ingen resultater";
+    }
 }
 
    /*//CONSTRUCTOR
