@@ -12,7 +12,7 @@ public class Movie {
 
     //CONSTRUCTOR som bruger this
     public Movie(String title, String director, int yearCreated, boolean isInColor,
-                 int lenghtInMinutes, String genre){
+                 int lenghtInMinutes, String genre) {
         this.title = title;
         this.director = director;
         this.yearCreated = yearCreated;
@@ -50,7 +50,7 @@ public class Movie {
     //override fordi den har en  indbygget toString som udskriver volapyk,
     //derfor overrider vi det med en String vi vil have udskrevet.
     //I nogle tilfælde (det her fx her) behøver man ikke skrive @override, andre gange er det vigtigt.
-    public String toString(){
+    public String toString() {
         String result = "";
         result += "\n" + title + "\n" + director + "\n" + yearCreated + "\n";
 
@@ -60,7 +60,7 @@ public class Movie {
             result += "filmen er ikke i farve";
         }
 
-        result +=  "\n" + lenghtInMinutes + "\n" + genre + " \n" + "\n";
+        result += "\n" + lenghtInMinutes + "\n" + genre + " \n" + "\n";
         return result;
     }
 }

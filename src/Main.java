@@ -36,8 +36,8 @@ public class Main {
                 boolean isInColor = false;
                 String erIFarve = scanner.next();
                 erIFarve = erIFarve.toLowerCase();
-                if (erIFarve.equals("ja")){
-                    isInColor=true;
+                if (erIFarve.equals("ja")) {
+                    isInColor = true;
                 }
                 System.out.println("Hvor langt er filmen i minutter?");
                 int lenghtInMinutes = scanner.nextInt();
@@ -52,15 +52,15 @@ public class Main {
                 System.out.println("Vil du afslutte? Skriv 4");
                 userInput2 = scanner.nextInt();
 
-            } else if (userInput == 2){
+            } else if (userInput == 2) {
                 System.out.println(controller.showMovieCollection());
 
-            } else if (userInput == 3){
+            } else if (userInput == 3) {
                 System.out.println("Indtast et eller flere bogstaver i en filmtitel?");
                 String userSearchWord = scanner.next();
                 System.out.println(controller.showSearch(userSearchWord));
 
-            } else if (userInput == SENTINEL){
+            } else if (userInput == SENTINEL) {
                 System.out.println("Oprettelse af film afsluttes.");
             }
         }

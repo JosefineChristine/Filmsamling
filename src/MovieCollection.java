@@ -7,7 +7,7 @@ public class MovieCollection {
     //Der står <Movie> fordi Movie er datatypen
 
     //CONSTRUCTOR
-    public MovieCollection () {
+    public MovieCollection() {
         movieArr = new ArrayList<Movie>();
     }
 
@@ -28,14 +28,16 @@ public class MovieCollection {
     }
 
     public String searchMovie(String charInput) {
+        String film = "";
         for (Movie movie : movieArr) {
-            boolean result = movie.getTitle().contains(charInput.toLowerCase());
-
-            if (result) {
-                return movie.toString();
+            if (movie.getTitle().contains(charInput.toLowerCase())) {
+                film += movie.toString();
+            } else {
+                return "\nSøgningen gav ingen resultater\n";
             }
         }
-        return "\nSøgningen gav ingen resultater";
+        return film;
+
     }
 }
 

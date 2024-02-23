@@ -13,7 +13,7 @@ public class Controller {
         yourMovieCollection.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
     }
 
-    public String showMovieCollection(){
+    public String showMovieCollection() {
         return yourMovieCollection.toString();
     }
 
