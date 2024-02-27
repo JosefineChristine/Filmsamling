@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class UserInterface {
     Controller controller = new Controller();
     Scanner scanner = new Scanner(System.in);
+
     public void startProgram() {
         int userInput = 0;
         int SENTINEL = 4;
@@ -14,7 +15,6 @@ public class UserInterface {
             System.out.println("4. Afslut\n");
 
             userInput = scanner.nextInt();
-            scanner.next();
 
             if (userInput == 1) {
                 addMovie();
@@ -29,15 +29,14 @@ public class UserInterface {
     }
     public void addMovie(){
         System.out.println("Hvad er titlen på filmen?");
-        String title = scanner.nextLine();
+        String title = scanner.next();
         System.out.println("Hvem har instrueret filmen?");
-        String director = scanner.nextLine();
-        scanner.next();
+        String director = scanner.next();
         System.out.println("Hvilket år er filmen lavet?");
         int yearCreated = scanner.nextInt();
-        scanner.next();
 
         System.out.println("Er filmen i farver? Skriv ja eller nej");
+        scanner.next();
         boolean isInColor = false;
         String erIFarve = scanner.nextLine();
         erIFarve = erIFarve.toLowerCase();
@@ -65,7 +64,6 @@ public class UserInterface {
     }
 
     public void  searchMovies() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Indtast et eller flere bogstaver i en filmtitel?");
         String userSearchWord = scanner.next();
         System.out.println(controller.showSearch(userSearchWord.toLowerCase()));

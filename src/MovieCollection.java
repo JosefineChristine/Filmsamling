@@ -28,17 +28,20 @@ public class MovieCollection {
     }
 
     public String searchMovie(String charInput) {
-        String film = "";
-        for (Movie movie : movieArr) {
-            if (movie.getTitle().contains(charInput.toLowerCase())) {
-                film += movie.toString();
-            } else {
-                return "\nSøgningen gav ingen resultater\n";
-            }
-        }
-        return film;
+        String filmSearchMatches = "";
 
+        for (Movie m : movieArr) {
+            if (m.getTitle().toLowerCase().contains(charInput.toLowerCase())) {
+                filmSearchMatches += m.toString();
+            }
+
+        }
+        if (!(filmSearchMatches.length() > 0)) {
+            return "Der var desværre ikke noget match.";
+        }
+        return filmSearchMatches;
     }
+
 }
 
 
