@@ -8,12 +8,7 @@ public class UserInterface {
         int SENTINEL = 4;
 
         while (userInput != SENTINEL) {
-            System.out.println("Velkommen til min filmsamling!");
-            System.out.println("1. Opret en film");
-            System.out.println("2. Vis filmsamling");
-            System.out.println("3. Søgefunktion");
-            System.out.println("4. Afslut\n");
-
+            showMenu();
             userInput = scanner.nextInt();
 
             if (userInput == 1) {
@@ -27,6 +22,15 @@ public class UserInterface {
             }
         }
     }
+
+    public void showMenu() {
+        System.out.println("Velkommen til min filmsamling!");
+        System.out.println("1. Opret en film");
+        System.out.println("2. Vis filmsamling");
+        System.out.println("3. Søgefunktion");
+        System.out.println("4. Afslut\n");
+    }
+
     public void addMovie(){
         System.out.println("Hvad er titlen på filmen?");
         String title = scanner.next();
