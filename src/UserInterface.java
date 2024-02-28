@@ -6,7 +6,7 @@ public class UserInterface {
 
     public void startProgram() {
         int userInput = 0;
-        int SENTINEL = 4;
+        int SENTINEL = 5;
 
         while (userInput != SENTINEL) {
             showMenu();
@@ -18,6 +18,8 @@ public class UserInterface {
                 showMovies();
             } else if (userInput == 3) {
                 searchMovies();
+            } else if (userInput == 4) {
+                editMovie();
             } else if (userInput == SENTINEL) {
                 System.out.println("Oprettelse af film afsluttes.");
             }
@@ -29,7 +31,8 @@ public class UserInterface {
         System.out.println("1. Opret en film");
         System.out.println("2. Vis filmsamling");
         System.out.println("3. Søgefunktion");
-        System.out.println("4. Afslut\n");
+        System.out.println("4. Rediger i film");
+        System.out.println("5. Afslut\n");
     }
 
     public void addMovie() {
@@ -72,6 +75,10 @@ public class UserInterface {
         System.out.println("Indtast et eller flere bogstaver i en filmtitel?");
         String userSearchWord = scanner.next();
         System.out.println(controller.showSearch(userSearchWord.toLowerCase()));
+    }
+
+    public void editMovie() {
+
     }
 
 }
