@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class UserInterface {
     Controller controller = new Controller();
     Scanner scanner = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class UserInterface {
         System.out.println("4. Afslut\n");
     }
 
-    public void addMovie(){
+    public void addMovie() {
         System.out.println("Hvad er titlen på filmen?");
         String title = scanner.next();
         System.out.println("Hvem har instrueret filmen?");
@@ -67,7 +68,7 @@ public class UserInterface {
         System.out.println(controller.showMovieCollection());
     }
 
-    public void  searchMovies() {
+    public void searchMovies() {
         System.out.println("Indtast et eller flere bogstaver i en filmtitel?");
         String userSearchWord = scanner.next();
         System.out.println(controller.showSearch(userSearchWord.toLowerCase()));

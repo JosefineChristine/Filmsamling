@@ -11,6 +11,10 @@ public class MovieCollection {
         movieArr = new ArrayList<Movie>();
     }
 
+    public ArrayList<Movie> getMovieArr() {
+        return movieArr;
+    }
+
     //METODE
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
         Movie movie1 = new Movie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
