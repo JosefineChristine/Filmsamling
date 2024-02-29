@@ -31,20 +31,20 @@ public class MovieCollection {
         return result;
     }
 
-    public String searchMovie(String charInput) {
-        String filmSearchMatches = "";
+    public ArrayList<Movie> searchMovie(String charInput) {
+        ArrayList<Movie> filmSearchMatches = new ArrayList<>();
 
         for (Movie m : movieArr) {
             if (m.getTitle().toLowerCase().contains(charInput.toLowerCase())) {
-                filmSearchMatches += m.toString();
+                filmSearchMatches.add(m);
             }
-
         }
-        if (!(filmSearchMatches.length() > 0)) {
-            return "Der var desværre ikke noget match.";
+        if (filmSearchMatches.isEmpty()) {
+            System.out.println("Filmen du søger efter findes ikke i samlingen.");
         }
         return filmSearchMatches;
     }
+    //TODO: lav pænere så filmene ikke printes i [].
 
 }
 

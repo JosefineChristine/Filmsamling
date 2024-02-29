@@ -2,7 +2,7 @@ public class Movie {
 
     //Her er vores dataobjekt
 
-    //ATTRIBUTTER
+    //ATTRIBUTTER/VARIABLER
     private String title;
     private String director;
     private int yearCreated;
@@ -10,7 +10,7 @@ public class Movie {
     private int lenghtInMinutes;
     private String genre;
 
-    //CONSTRUCTOR som bruger this
+    //CONSTRUCTOR: tager parametre og tilføjer dem som argumenter
     public Movie(String title, String director, int yearCreated, boolean isInColor,
                  int lenghtInMinutes, String genre) {
         this.title = title;
@@ -21,7 +21,7 @@ public class Movie {
         this.genre = genre;
     }
 
-    //METODE
+    //GETTER METODER
     public String getTitle() {
         return title;
     }
@@ -46,6 +46,32 @@ public class Movie {
         return genre;
     }
 
+
+    // SETTER METODER
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDirector (String director) {
+        this.director = director;
+    }
+
+    public void setYearCreated(int yearCreated) {
+        this.yearCreated = yearCreated;
+    }
+
+    public void setIsInColor(boolean isInColor) {
+        this.isInColor = isInColor;
+    }
+
+    public void setLenghtInMinutes (int lenghtInMinutes) {
+        this.lenghtInMinutes = lenghtInMinutes;
+    }
+
+    public void setGenre (String genre) {
+        this.genre = genre;
+    }
+
     @Override
     //override fordi den har en  indbygget toString som udskriver volapyk,
     //derfor overrider vi det med en String vi vil have udskrevet.
@@ -63,6 +89,9 @@ public class Movie {
         result += "\n" + lenghtInMinutes + "\n" + genre + " \n" + "\n";
         return result;
     }
+    //+=: bruges her som ''alt det før plus det her''
+
+
 }
 
-//+=: bruges her som ''alt det før plus det her''
+

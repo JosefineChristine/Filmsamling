@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -51,6 +52,8 @@ public class UserInterface {
         if (erIFarve.equals("ja")) {
             isInColor = true;
         }
+        //TODO: Få farve til at virke
+
         System.out.println("Hvor langt er filmen i minutter?");
         int lenghtInMinutes = scanner.nextInt();
         System.out.println("Hvilken genre er filmen?");
@@ -63,7 +66,7 @@ public class UserInterface {
         System.out.println("Filmen er tilføjet til samlingen.");
         System.out.println();
         System.out.println("Vil du tilbage til menuen? Skriv 1");
-        System.out.println("Vil du afslutte? Skriv 4");
+        System.out.println("Vil du afslutte? Skriv 5");
         userInput2 = scanner.nextInt();
     }
 
@@ -78,7 +81,82 @@ public class UserInterface {
     }
 
     public void editMovie() {
+        System.out.println("Skriv titlen på den film, du vil redigere.");
+        String userSearchWord = scanner.next();
+
+        /* //en metode med en lokal arrayliste til controller.showSearch(userSearchWord.toLowerCase()
+        ArrayList<Movie> searchResults = controller.showSearch(userSearchWord.toLowerCase());
+
+        if (searchResults.size() > 1){
+            System.out.println("Hvilken film vil du ændre?" + searchResults);
+        }
+
+        //et loop der går igennem listen med søgeresultaterne, og tilføjer et nummer ud fra hver film.
+        // Derefter en switch case hvor brugeren kan vælge */
+
+        ArrayList<Movie> movieArr = controller.yourMovieCollection.getMovieArr();
+
+        for (Movie editMovieArr : movieArr) {
+            if (editMovieArr.getTitle().equals(userSearchWord)) {
+                System.out.println("Hvad vil du redigere, skriv et tal mellem 1 og 6 for at vælge:");
+                System.out.println("1. Titel");
+                System.out.println("2. Instruktør");
+                System.out.println("3. Årstal");
+                System.out.println("4. Om filmen er i farver");
+                System.out.println("5. Længde i minutter");
+                System.out.println("6. Genre");
+
+                int editChoice = scanner.nextInt();
+
+                if (editChoice == 1) {
+                    System.out.println("Hvad vil du ændre titlen til?");
+                    String titleEdit = scanner.next();
+                    editMovieArr.setTitle(titleEdit);
+
+                } else if (editChoice == 2) {
+                    System.out.println("Hvad vil du ændre instruktøren til?");
+                    String directorEdit = scanner.next();
+                    editMovieArr.setDirector(directorEdit);
+
+                } else if (editChoice == 3) {
+                    System.out.println("Hvad vil du ændre årstallet til?");
+                    int yearCreatedEdit = scanner.nextInt();
+                    editMovieArr.setYearCreated(yearCreatedEdit);
+
+                } else if (editChoice == 4) {
+                    System.out.println("Er filmen i farver skriv ja, ellers skriv nej.");
+                    scanner.next();
+                    boolean isInColorEdit = false;
+                    String erIFarve2 = scanner.nextLine();
+                    erIFarve2 = erIFarve2.toLowerCase();
+                    if (erIFarve2.equals("ja")) {
+                        isInColorEdit = true;
+                    }
+                    editMovieArr.setIsInColor(isInColorEdit);
+                    //TODO: Få farve til at virke
+
+                } else if (editChoice == 5) {
+                    System.out.println("Hvad vil du ændre filmens længde i minutter til?");
+                    int lenghtInMinutesEdit = scanner.nextInt();
+                    editMovieArr.setLenghtInMinutes(lenghtInMinutesEdit);
+
+                } else if (editChoice == 6) {
+                    System.out.println("Hvad vil du ændre genren til?");
+                    String genreEdit = scanner.next();
+                    editMovieArr.setGenre(genreEdit);
+                }
+
+                int userInput3 = 0;
+
+                System.out.println("Din ændring er gemt.");
+                System.out.println();
+                System.out.println("Vil du tilbage til menuen? Skriv 1");
+                System.out.println("Vil du afslutte? Skriv 5");
+                userInput3 = scanner.nextInt();
+
+            }
+
+        }
 
     }
-
 }

@@ -10,6 +10,7 @@ public class Controller {
         yourMovieCollection = new MovieCollection();
     }
 
+    //Metode som tilføjer argumenter fra mail til yourMovieCollection
     public void addMovie(String title, String director, int yearCreated, boolean isInColor, int lenghtInMinutes, String genre) {
         yourMovieCollection.addMovie(title, director, yearCreated, isInColor, lenghtInMinutes, genre);
     }
@@ -18,7 +19,7 @@ public class Controller {
         return yourMovieCollection.toString();
     }
 
-    public String showSearch(String charInput) {
+    public ArrayList<Movie> showSearch(String charInput) {
         return yourMovieCollection.searchMovie(charInput);
     }
 
