@@ -52,7 +52,7 @@ public class UserInterface {
         if (erIFarve.equals("ja")) {
             isInColor = true;
         }
-        //TODO: Få farve til at virke
+        //TODO: Få farve til at virke. Måske er problemet i Movie-klassen i toString.
 
         System.out.println("Hvor langt er filmen i minutter?");
         int lenghtInMinutes = scanner.nextInt();
@@ -83,16 +83,6 @@ public class UserInterface {
     public void editMovie() {
         System.out.println("Skriv titlen på den film, du vil redigere.");
         String userSearchWord = scanner.next();
-
-        /* //en metode med en lokal arrayliste til controller.showSearch(userSearchWord.toLowerCase()
-        ArrayList<Movie> searchResults = controller.showSearch(userSearchWord.toLowerCase());
-
-        if (searchResults.size() > 1){
-            System.out.println("Hvilken film vil du ændre?" + searchResults);
-        }
-
-        //et loop der går igennem listen med søgeresultaterne, og tilføjer et nummer ud fra hver film.
-        // Derefter en switch case hvor brugeren kan vælge */
 
         ArrayList<Movie> movieArr = controller.yourMovieCollection.getMovieArr();
 
@@ -133,7 +123,7 @@ public class UserInterface {
                         isInColorEdit = true;
                     }
                     editMovieArr.setIsInColor(isInColorEdit);
-                    //TODO: Få farve til at virke
+                    //TODO: Få farve til at virke. Måske er problemet i Movie-klassen i toString.
 
                 } else if (editChoice == 5) {
                     System.out.println("Hvad vil du ændre filmens længde i minutter til?");

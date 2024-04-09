@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 //Controller har en metode som returerer en string tilbage
-//Controller har en metode som returerer en string tilbage
 
 public class Controller {
-    MovieCollection yourMovieCollection = new MovieCollection();
+    MovieCollection yourMovieCollection;
 
     //CONSTRUCTOR
     public Controller() {

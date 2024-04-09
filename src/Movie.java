@@ -78,15 +78,15 @@ public class Movie {
     //I nogle tilfælde (det her fx her) behøver man ikke skrive @override, andre gange er det vigtigt.
     public String toString() {
         String result = "";
-        result += "\n" + title + "\n" + director + "\n" + yearCreated + "\n";
+        result += "\nFilm titel: " + title + "\nInstruktør: " + director + "\nÅrstal: " + yearCreated + "\n";
 
         if (isInColor) {
-            result += "filmen er i farve";
+            result += "Filmen er i farve";
         } else {
-            result += "filmen er ikke i farve";
+            result += "Filmen er ikke i farve";
         }
 
-        result += "\n" + lenghtInMinutes + "\n" + genre + " \n" + "\n";
+        result += "\nFilmens længde: " + lenghtInMinutes + "\nGenre: " + genre + " \n" + "\n";
         return result;
     }
     //+=: bruges her som ''alt det før plus det her''
